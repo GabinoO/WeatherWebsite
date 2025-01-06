@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Weather Website</h1>
+  <div id="container">
+    <h2>Provide the Following to Get Your Weather</h2>
+    <div id="inputContainer">
+      <p>Enter City</p>
+      <input type="text" name="cityName" id="cityName" placeholder="Your City ex. Chicago">
+      <button id="enter">Enter</button>
+    </div>
+      <h1 id="userCity">City</h1>
+      <p id="tempNum">℉</p>
+    <div id="extraInfoPanel">
+      <div id="windPanel">
+        <h2 class="panelHeaders">Wind</h2>
+        <div id="windContent" class="panelContent">
+          <img src="images/pngtree-vector-wind-icon-png-image_4225203-removebg-preview.png" alt="" class="panelImages">
+          <p class="panelParagraphs" id="windNumber"></p>
+        </div>
+      </div>
+      <div id="humidityPanel">
+        <h2 class="panelHeaders">Humidity</h2>
+        <div class="panelContent">
+          <img src="images/e153651b03757ca94b2bfddb4665af1f-removebg-preview.png" alt="" class="panelImages">
+          <p class="panelParagraphs" id="humidityNumber"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
