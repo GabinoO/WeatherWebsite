@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  background-image: url(images/177482-3840x2160-desktop-4k-clouds-background-image.jpg);
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+#container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 75vh;
+  height: 80vh;
+  border: solid black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px black;
+}
+
+#inputContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vh;
+}
+
+p {
+  font-size: larger;
+  font-weight: 700;
+  margin: 15px 15px;
+}
+
+input {
+  border: solid black;
+  background: transparent;
+  width: 40vh;
+  height: 35px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#enter {
+  margin-top: 2px;
+  margin-left: 5px;
+  background: black;
+  color: white;
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  font-size: 15px;
+  transition-duration: 500ms;
+}
+
+#enter:hover {
+  background-color: #507FA9;
+  color: black;
+}
+
+#userCity {
+  font-size: 5vh;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+
+#tempNum {
+font-size: 9vh;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+#extraInfoPanel {
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10vh;
+  align-items: center;
+  width: 60vh;
+  height: 15vh;
+}
+
+#windPanel {
+  width: 35vh;
+  height: 15vh;
+  border: solid black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.panelImages {
+  width: 5vh;
+  height: 5vh;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.panelContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.panelHeaders {
+  margin: 10px;
+}
+
+.panelParagraphs {
+  margin: 10px 0px 0px 0px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+#humidityPanel {
+  width: 35vh;
+  height: 15vh;
+  border: solid black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px black;
+}
+
+
+
+
