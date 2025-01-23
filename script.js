@@ -1,5 +1,6 @@
 let enterButton = document.getElementById("enter");
 enterButton.addEventListener("click",getWeather);
+const apiID = "";
 
 async function getWeather() {
   let cityName = document.getElementById("cityName").value;
@@ -7,17 +8,18 @@ async function getWeather() {
   let latitude = 0;
 
   // verify empty input
-  if (verifyInput(cityName) == false) {
+  if (verifyInput(cityName) === false) {
     document.getElementById("userCity").innerHTML = "City is empty";
     return;
   }
 
   // (1) first get longitude / latitude coordinates for the weather API
-  let geoURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=secretKey";
+  let geoURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" +
+      apiID;
   try {
     let geoAPIResponse = await fetch(geoURL); // get the response object
     // if the API was not able to make a round trip to database --> city or state must be invalid
-    if (geoAPIResponse.ok == false) {
+    if (geoAPIResponse.ok === false) {
       document.getElementById("userCity").innerHTML = "City is invalid";
       return;
     }
@@ -33,11 +35,11 @@ async function getWeather() {
 
   // (2) now get the weather using the longitude / latitude coordinates
   weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + 
-          "&appid=secretKey";
+          "&appid=" + apiID;
   try {
     let weatherAPIResponse = await fetch(weatherURL); // get the response object
     // in case the round trip was unnsuccessful --> by this point of long / lat coordinates should be correct
-    if (weatherAPIResponse.ok == false) {
+    if (weatherAPIResponse.ok === false) {
       document.getElementById("userCity").innerHTML = "Something went wrong, refresh and try again";
       return;
     }
@@ -58,7 +60,7 @@ async function getWeather() {
 }
 
 function verifyInput(city) {
-  if (city.trim() == "") {
+  if (city.trim() === "") {
     return false;
   }
   return true;
